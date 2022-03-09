@@ -1,0 +1,76 @@
+{
+  "name": "create-wbreact-app",
+  "version": "1.0.0",
+  "description": "a react boilerplate setup with webpack using typescript eslint husky prettier and other cool thinks",
+  "keyword": [
+    "boilerplate",
+    "react-app",
+    "react",
+    "webpack",
+    "eslint",
+    "ts",
+    "hysky"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/TadjerouniMohamedAdel/create-wbreact-app.git",
+  "author": "TadjerounMohamedAdel <mohnagato@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "bin": {
+    "create-wreact-app": "./bin/create-app.js"
+  },
+  "scripts": {
+    "start": "webpack server --config webpack/webpack.config.js --env env=dev",
+    "build": "webpack  --config webpack/webpack.config.js --env env=prod",
+    "check-lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "check-format": "prettier --check \"./src/**/*.{js,jsx,ts,ysx,json,css,scss,less,.md}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,ysx,json,css,scss,less,.md}\"",
+    "prepare": "husky install",
+    "test": "echo 'not supported yet'"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn check-lint",
+      "yarn check-format",
+      "yarn format",
+      "yarn test --watchAll=false --findRelatedTests --bail"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.17.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.5.1",
+    "react-refresh": "^0.11.0",
+    "style-loader": "^3.3.1",
+    "typescript": "4.4.2",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  }
+}
