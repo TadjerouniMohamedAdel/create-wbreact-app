@@ -1,7 +1,7 @@
 # create-wbreact-app
 
 <p>
-A react boilerplate setup with webpack using typescript eslint husky prettier and other cool thinks
+A react boilerplate setup with webpack using typescript eslint husky prettier and other cool things
 </p>
 
 ## Features
