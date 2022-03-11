@@ -1,6 +1,6 @@
 {
   "name": "create-wbreact-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a react boilerplate setup with webpack using typescript eslint husky prettier and other cool things",
   "keyword": [
     "boilerplate",
